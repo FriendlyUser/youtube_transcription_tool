@@ -9,3 +9,11 @@ This repository illustrates how to build a simple transcription tool for youtube
       yt_dlp
   * Gladia API key 
   * ffmpeg
+
+To use the `process_vid.py` script you will need to set an environment variable before running it. 
+
+You can do this in linux with
+
+```bash
+export GLADIA_API_KEY="<key goes here>"
+```

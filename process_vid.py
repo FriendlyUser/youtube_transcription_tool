@@ -2,6 +2,22 @@ import requests
 import os 
 import json
 
+import yt_dlp
+
+# Code to download video...
+
+def download_video(url):
+  ydl_opts = {
+    'outtmpl': '%(id)s.%(ext)s',
+    'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'
+  }
+
+  with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+    ydl.download([url]) 
+
+download_video('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+
+
 # get gladia api key
 apiKey = os.getenv("GLADIA_API_KEY")
 headers = {
